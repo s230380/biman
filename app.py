@@ -8,7 +8,7 @@ model = joblib.load('logistic_regression_model.pkl')
 
 # 2. 모델 설명
 st.title('비만 분류기')
-col1, col2,col3 = st.columns( ____ )      # 몇 개의 컬럼으로 나눌까?
+col1, col2,col3 = st.columns( 3 )      # 몇 개의 컬럼으로 나눌까?
 with col1:
       st.subheader('모델 설명 ')
       st.write(' - 기계학습 알고리즘 : 로지스틱 회귀 ')
@@ -29,7 +29,7 @@ with col3:
 st.subheader('모델 활용')
 st.write('**** 나이를 입력하세요.. 인공지능이 당신의 비만도를 알려드립니다!')
 
-a = st.number_input(' _________ ', value=0)   # 사용자 입력
+a = st.number_input(' 나이를 입럭해 ', value=0)   # 사용자 입력
 
 if st.button('합불분류'):              # 사용자가 '합불분류' 버튼을 누르면
         input_data = [[ a ]]          # 사용자가 입력한 a,b,c 를 input_data에 저장하고
